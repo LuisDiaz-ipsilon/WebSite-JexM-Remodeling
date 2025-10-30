@@ -44,7 +44,7 @@ class Home extends React.PureComponent {
         // <Page3 key="page3" isMobile={this.state.isMobile} />,
         // <Page4 key="page4" />,
         <Footer key="footer" />,
-        <DocumentTitle title="Ant Design - 一个 UI 设计语言" key="title" />,
+        <DocumentTitle title="JexM Remodeling" key="title" />,
       ]
     );
   }

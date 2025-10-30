@@ -1,6 +1,6 @@
 ### ant design 2.x
 
-ant design 2.x 里的 landing page. 
+JexM. 
 
 脚手架使用的是： [antd-init](https://github.com/ant-design/antd-init);
 
