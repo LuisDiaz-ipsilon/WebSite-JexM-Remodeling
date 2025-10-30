@@ -15,7 +15,7 @@ export default function Page1() {
   ];
 
   const images = [photo1, photo2, photo3, photo4, photo5, photo6];
-  
+
 
   return (
     <div className="gallery-wrapper">
@@ -31,7 +31,7 @@ export default function Page1() {
         <h1 className="brand">WE ARE   <span>EXPERTS</span></h1>
         <h2 className="title">WORKS</h2>
         <ul className="locations">
-          {topics.map((loc) => (
+          {topics.map(loc => (
             <li key={loc}>{loc}</li>
           ))}
         </ul>

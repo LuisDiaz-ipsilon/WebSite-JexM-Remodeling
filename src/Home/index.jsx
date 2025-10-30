@@ -39,10 +39,10 @@ class Home extends React.PureComponent {
       [
         <Header key="header" isFirstScreen={this.state.isFirstScreen} isMobile={this.state.isMobile} />,
         <Banner key="banner" onEnterChange={this.onEnterChange} />,
-        <Page1 key="page1"/>,
+        <Page1 key="page1" />,
         // <Page2 key="page2" />,
-        //<Page3 key="page3" isMobile={this.state.isMobile} />,
-        //<Page4 key="page4" />,
+        // <Page3 key="page3" isMobile={this.state.isMobile} />,
+        // <Page4 key="page4" />,
         <Footer key="footer" />,
         <DocumentTitle title="Ant Design - 一个 UI 设计语言" key="title" />,
       ]
