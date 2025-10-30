@@ -24,23 +24,10 @@ export default function Banner({ onEnterChange }) {
         playScale={0.9}
       >
         <QueueAnim className="banner-text-wrapper" type={typeFunc} delay={300} key="banner">
-          <h2 key="h2">ANT <p>DESIGN</p></h2>
-          <p key="content">一个 UI 设计语言</p>
+          <h2 key="h2">JexM <p>REMODELING</p></h2>
+          <p key="content">Experts</p>
           <span className="line" key="line" />
-          <div key="button1" className="start-button clearfix">
-            <a>
-              设计规范
-            </a>
-            <a>
-              开发指引
-            </a>
-          </div>
-          <GitHubButton
-            key="github-button"
-            type="stargazers"
-            namespace="ant-design"
-            repo="ant-design"
-          />
+
         </QueueAnim>
         <Icon type="down" className="down" />
       </ScrollElement>

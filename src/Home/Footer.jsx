@@ -9,14 +9,14 @@ function Footer() {
         <Row>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
-              <h2>Ant Design</h2>
+              <h2>JexM Remodeling</h2>
               <div>
-                <a target="_blank " href="https://github.com/ant-design/ant-design">
-                  GitHub
+                <a target="_blank " href="">
+                  Jiucel Marketing
                 </a>
               </div>
-              <div>
-                <a href="http://pro.ant.design">Ant Design Pro</a>
+              {/* <div>
+                <a href="">Ant Design Pro</a>
               </div>
               <div>
                 <a href="http://mobile.ant.design">Ant Design Mobile</a>
@@ -30,16 +30,11 @@ function Footer() {
                 <a target="_blank " href="https://github.com/websemantics/awesome-ant-design">
                   Awesome Ant Design
                 </a>
-              </div>
-              <div>
-                <a target="_blank " href="http://ant-design.gitee.io/">
-                  国内镜像站点 🇨🇳
-                </a>
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
-            <div className="footer-center">
+            {/* <div className="footer-center">
               <h2>资源链接</h2>
               <div>
                 <a href="http://scaffold.ant.design">Scaffolds</a>
@@ -68,10 +63,10 @@ function Footer() {
                 <span> - </span>
                 页面逻辑素材
               </div>
-            </div>
+            </div> */}
           </Col>
           <Col lg={6} sm={24} xs={24}>
-            <div className="footer-center">
+            {/* <div className="footer-center">
               <h2>社区</h2>
               <div>
                 <a href="/changelog">
@@ -113,23 +108,23 @@ function Footer() {
                   SegmentFault
                 </a>
               </div>
-            </div>
+            </div> */}
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>
                 <img className="title-icon" src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg" alt="" />
-                更多产品
+                Contact
               </h2>
               <div>
-                <a target="_blank" rel="noopener noreferrer" href="https://antv.alipay.com/">AntV</a>
+                <a target="_blank" rel="noopener noreferrer" href="">Instagram</a>
                 <span> - </span>
-                数据可视化
+                intagramLink
               </div>
               <div>
-                <a target="_blank" rel="noopener noreferrer" href="https://eggjs.org/">Egg</a>
+                <a target="_blank" rel="noopener noreferrer" href="">Phone</a>
                 <span> - </span>
-                企业级 Node 开发框架
+                Phone
               </div>
             </div>
           </Col>
@@ -144,24 +139,23 @@ function Footer() {
             }}
           >
             <a
-              href="https://docs.alipay.com/policies/privacy/antfin"
+              href=""
               rel="noopener noreferrer"
               target="_blank"
             >
-              隐私权政策
+              Telephone
             </a>
           </span>
           <span style={{ marginRight: 24 }}>
             <a
-              href="https://render.alipay.com/p/f/fd-izto3cem/index.html"
+              href=""
               rel="noopener noreferrer"
               target="_blank"
             >
-              权益保障承诺书
+              Email
             </a>
           </span>
-          <span style={{ marginRight: 12 }}>ICP 证浙 B2-2-100257</span>
-          <span style={{ marginRight: 12 }}>Copyright © 蚂蚁金融服务集团</span>
+          <span style={{ marginRight: 12 }}>Copyright © 2025</span>
         </Col>
       </Row>
     </footer>

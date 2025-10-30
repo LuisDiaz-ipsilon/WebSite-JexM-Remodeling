@@ -1,39 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import TweenOne from 'rc-tween-one';
-import ScrollOverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Icon, Button } from 'antd';
-import QueueAnim from 'rc-queue-anim';
+import './static/page1.less';
+import photo1 from './static/images/photo1.png';
+import photo2 from './static/images/photo2.png';
+import photo3 from './static/images/photo3.png';
+import photo4 from './static/images/photo4.png';
+import photo5 from './static/images/photo5.png';
+import photo6 from './static/images/photo6.png';
 
-export default function Page1({ isMobile }) {
+
+export default function Page1() {
+  const topics = [
+    'The kitchen cabinets', 'Painting Interior', 'Ceramic', 'Doors installment',
+    'Baseborads',
+  ];
+
+  const images = [photo1, photo2, photo3, photo4, photo5, photo6];
+  
+
   return (
-    <ScrollOverPack id="page1" className="content-wrapper page">
-      <TweenOne
-        key="image"
-        className="image1 image-wrapper"
-        animation={{ x: 0, opacity: 1, ease: 'easeOutQuad' }}
-        style={{ transform: 'translateX(-100px)', opacity: 0 }}
-      />
-      <QueueAnim
-        type={isMobile ? 'bottom' : 'right'}
-        className="text-wrapper"
-        key="text"
-        leaveReverse
-      >
-        <h2 key="h2">最佳实践</h2>
-        <p key="p" style={{ maxWidth: 310 }}>近一年的中后台设计实践，积累了大量的优秀案例。</p>
-        <div key="button">
-          <a>
-            <Button type="primary" size="large">
-              了解更多
-              <Icon type="right" />
-            </Button>
-          </a>
-        </div>
-      </QueueAnim>
-    </ScrollOverPack>
+    <div className="gallery-wrapper">
+      <div className="gallery-grid">
+        {images.map((src, i) => (
+          <div className="gallery-item" key={i}>
+            <img src={src} alt={`scene-${i}`} />
+          </div>
+        ))}
+      </div>
+
+      <aside className="sidebar">
+        <h1 className="brand">WE ARE   <span>EXPERTS</span></h1>
+        <h2 className="title">WORKS</h2>
+        <ul className="locations">
+          {topics.map((loc) => (
+            <li key={loc}>{loc}</li>
+          ))}
+        </ul>
+      </aside>
+    </div>
   );
 }
-Page1.propTypes = {
-  isMobile: PropTypes.bool,
-};

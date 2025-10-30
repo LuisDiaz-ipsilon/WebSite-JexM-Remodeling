@@ -47,26 +47,18 @@ export default class Header extends React.Component {
     });
 
     const menu = [
-      <Button className="header-lang-button" ghost size="small" key="lang">
-        English
-      </Button>,
+
       <Menu mode={menuMode} defaultSelectedKeys={['home']} id="nav" key="nav">
         <Menu.Item key="home">
-          首页
+          Home
         </Menu.Item>
         <Menu.Item key="docs/spec">
-          指引
+          Works
         </Menu.Item>
         <Menu.Item key="docs/react">
-          组件
+          Contact
         </Menu.Item>
-        <Menu.Item key="docs/pattern">
-          模式
-        </Menu.Item>
-        <Menu.Item key="docs/resource">
-          资源
-        </Menu.Item>
-        <Menu.Item key="pro">
+        {/* <Menu.Item key="pro">
           <a
             href="http://pro.ant.design"
             className="header-link"
@@ -81,7 +73,7 @@ export default class Header extends React.Component {
               <Badge dot />
             </span>
           </a>
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>,
     ];
 
@@ -107,8 +99,8 @@ export default class Header extends React.Component {
         <Row>
           <Col lg={4} md={5} sm={24} xs={24}>
             <a id="logo">
-              <img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
-              <span>Ant Design</span>
+              <img alt="logo" src="src/Home/static/images/logo less background.webp" />
+              <span>JexM</span>
             </a>
           </Col>
           <Col lg={20} md={19} sm={0} xs={0}>
