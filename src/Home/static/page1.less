@@ -23,11 +23,58 @@
     }
   }
   
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+  
+    &:hover img {
+      transform: scale(1.05);
+    }
+  
+    .overlay {
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+        background: rgba(255, 255, 255, 0.8);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s ease;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+    }
+  
+    &:hover .overlay {
+      opacity: 1;
+    }
+  
+    .overlay-text {
+      font-size: 24px;
+      font-weight: 500;
+      color: #111;
+      letter-spacing: 1px;
+      text-align: center;
+    }
   }
   
   .sidebar {
@@ -72,9 +119,13 @@
     color: #555;
     line-height: 1.8;
   
+    li {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+  
     li:hover {
       color: black;
-      cursor: pointer;
     }
   }
   
