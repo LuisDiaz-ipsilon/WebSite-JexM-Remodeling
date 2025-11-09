@@ -9,6 +9,8 @@ import Page3 from './Page3';
 import Page4 from './Page4';
 import Footer from './Footer';
 import './static/style';
+import WorkDetail from './WorkDetail';
+
 
 let isMobile = false;
 enquireScreen((b) => {
@@ -19,6 +21,7 @@ class Home extends React.PureComponent {
   state = {
     isFirstScreen: true,
     isMobile,
+    selectedWork: null
   };
 
   componentDidMount() {
@@ -29,21 +32,34 @@ class Home extends React.PureComponent {
     });
   }
 
+  handleSelectWork = (work) => {
+    this.setState({ selectedWork: work });
+  };
+
+  handleBack = () => {
+    this.setState({ selectedWork: null });
+  };
+
   onEnterChange = (mode) => {
     this.setState({
       isFirstScreen: mode === 'enter',
     });
   }
   render() {
+    const { selectedWork } = this.state;
+
     return (
       [
-        <Header key="header" isFirstScreen={this.state.isFirstScreen} isMobile={this.state.isMobile} />,
-        <Banner key="banner" onEnterChange={this.onEnterChange} />,
-        <Page1 key="page1" />,
-        // <Page2 key="page2" />,
-        // <Page3 key="page3" isMobile={this.state.isMobile} />,
-        // <Page4 key="page4" />,
-        <Footer key="footer" />,
+        !selectedWork ? (
+          [
+            <Header key="header" isFirstScreen={this.state.isFirstScreen} isMobile={this.state.isMobile} />,
+            <Banner key="banner" onEnterChange={this.onEnterChange} />,
+            <Page1 key="page1" onSelectWork={this.handleSelectWork} />,
+            <Footer key="footer" />,
+          ]
+        ) : (
+          <WorkDetail key="workdetail" work={selectedWork} onBack={this.handleBack} />
+        ),
         <DocumentTitle title="JexM Remodeling" key="title" />,
       ]
     );
